@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/style4.css">
+    <title>Review Stat</title>
+</head>
+<header>
+    
+<body>
+    <p> CRIMOPHILIA</p>
+    <br>
+    <div>
+    <table>
+        <thead>
+          <tr>
+              <th>Name</th>
+              <th>No of Reviews Made</th>
+          </tr>
+          </thead>    
+          <tbody>
+           {% for row in data %}    
+                  <tr>
+                      <td>{{row[0]}}</td>
+                      <td>{{row[1]}}</td>
+                  </tr>
+              {% endfor %}
+          </tbody>
+      </table>
+      
+    </div>
+
+
+
+    <div>
+        <table>
+            <thead>
+              <tr>
+                  <th>D-Id</th>
+                  <th>Doc Name</th>
+                  <th>Director</th>
+                  <th>Release Date</th>
+                  <th>Rating</th>
+              </tr>
+              </thead>    
+              <tbody>
+               {% for row in data4 %}    
+                      <tr>
+                          <td>{{row[0]}}</td>
+                          <td>{{row[1]}}</td>
+                          <td>{{row[2]}}</td>
+                          <td>{{row[4]}}</td>
+                      </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+          
+        </div>
+    <br>
+      
+    <div>
+      <table class="table">
+        <thead>
+          <tr>
+              <th>B Id</th>
+              <th>M Id</th>
+              <th>D Id</th>
+              <th>Count</th>
+          </tr>
+          </thead>    
+          <tbody>
+           {% for row in data2 %}    
+                  <tr>
+                      <td>{{row[0]}}</td>
+                      <td>{{row[1]}}</td>
+                      <td>{{row[2]}}</td>
+                      <td>{{row[3]}}</td>
+                  </tr>
+              {% endfor %}
+          </tbody>
+      </table>
+    </div><br>
+    <div>
+        <table>
+          <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Content</th>
+            </tr>
+            </thead>    
+            <tbody>
+             {% for row in data3 %}    
+                    <tr>
+                        <td>{{row[0]}}</td>
+                        <td>{{row[1]}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+      </div><br>
+
+      <a href="{{ url_for('dashboard') }}">Home</a><br>
+      </body>
+    </header>
+</html>
